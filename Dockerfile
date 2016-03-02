@@ -1,4 +1,4 @@
-FROM nkpatro/docker-ubuntu:14.04
+FROM nkpatro/docker-ubuntu:latest
 MAINTAINER nkpatro@gmail.com
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
