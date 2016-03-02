@@ -1,28 +1,19 @@
 
 # docker-youtrack
 
-*Easy youtrack deployment using docker*
-
-These Dockerfiles allow you to easily build images to deploy your own [youtrack](http://www.jetbrains.com/youtrack/) instance.
-
-## Disclaimer
-Besides that, as always, use these scripts with care.
-
-Don't forget to back up your data very often, too.
+*Easy [youtrack](http://www.jetbrains.com/youtrack/) deployment using docker*
 
 ## Requirements
-Docker has to run. It supports many platforms like Ubuntu, Arch Linux, Mac OS X, Windows, EC2 or the Google Cloud.
-[Click here](http://docs.docker.io/en/latest/installation/) to get specific infos on how to install on your platform.
+You should have Docker running on you machine
 
-## Oh nice! How do I do it?
+## Where do I start?
 1. Install docker. [It's not very hard.](http://docs.docker.io/en/latest/installation/)
 2. Run it! (Stop with CTRL-C, repeat at pleasure)
 
   `docker run -t -i -p 8080:8080 dzwicker/docker-youtrack`
 
 
-
-Now open your browser and point it to `http://localhost:8080` and rejoice. :)
+Now open your browser and point it to `http://localhost:8080` and have fun. :)
 
 ## Do it as service in ubuntu/debian
 1. Create directory to store data
@@ -35,7 +26,7 @@ Now open your browser and point it to `http://localhost:8080` and rejoice. :)
 
 2. Permissions!
 
-  The Dockerfile creates a youtrack user to run `youtrack` without root permissions. This user has a `UID` of `2000`. Please make sure to add a user to your host system with this `UID` and allow him to read and write to `/var/lib/youtrack`. The name of this host user in not important. (You can use a the user group, too. It has the `GID` of 2000 :)
+  The Dockerfile creates a youtrack user to run `youtrack` without root permissions. This user has a `UID` of `2000`. Please make sure to add a user to your host system with this `UID` and allow him to read and write to `/var/lib/youtrack`. The name of this host user is not important.
   
 3. Create container!
 
